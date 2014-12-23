@@ -352,7 +352,7 @@ function updateCurrentTrackLiked()
     // Insert new state
     if ( !wasLiked )
     {
-        var path = Amarok.Info.scriptPath()+"/tmp/tmp.xspf";
+        var path = Amarok.Info.scriptPath()+"/tmp.xspf";
         var file = new QFile(path);
         file.open(QIODevice.WriteOnly||QIODevice.Truncate);
         var xml = new QXmlStreamWriter();

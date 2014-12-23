@@ -452,7 +452,7 @@ function parseChannelDetail(id, error)
     songs_count = songs.length;
 
     // Generate Playlist
-    var path = Amarok.Info.scriptPath()+"/tmp/tmp.xspf";
+    var path = Amarok.Info.scriptPath()+"/tmp.xspf";
     var file = new QFile(path);
     file.open(QIODevice.WriteOnly||QIODevice.Truncate);
     var xml = new QXmlStreamWriter();
