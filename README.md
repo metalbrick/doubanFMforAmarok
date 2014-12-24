@@ -19,6 +19,7 @@ git clone https://github.com/metalbrick/doubanFMforAmarok.git ~/kde/share/apps/a
 
 # Screenshot
 ![Screenshot](http://kde-apps.org/CONTENT/content-pre1/168312-1.png)
+
 基本上是截图说明一切的小插件。
 
 # Login
