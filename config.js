@@ -240,12 +240,6 @@ function openLoginDialog()
     return;
 }
 
-function toggleLike()
-{
-    Amarok.Window.OSD.showCurrentTrack();
-    return;
-}
-
 function finishLoginRequest(id, error)
 {
     var result = request.readAll();

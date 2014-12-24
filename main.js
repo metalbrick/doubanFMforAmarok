@@ -465,11 +465,11 @@ function parseChannelDetail(id, error)
     for ( var i = 0; i < songs_count; ++ i )
     {
         xml.writeStartElement("track");
-        url = songs[i].url.replace("&", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
-        title = songs[i].title.replace("&", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
-        artist = songs[i].artist.replace("&", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
-        albumtitle = songs[i].albumtitle.replace("&", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
-        imageurl = songs[i].picture.replace("&", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
+        url = songs[i].url.replace("/&/", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
+        title = songs[i].title.replace("/&/", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
+        artist = songs[i].artist.replace("/&/", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
+        albumtitle = songs[i].albumtitle.replace("/&/", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
+        // imageurl = songs[i].picture.replace("&", "&amp;", "g").replace("<", "&lt;", "g").replace(">", "&gt;", "g");
         xml.writeTextElement("location", url);
         xml.writeTextElement("identifier", songs[i].sid);
         xml.writeTextElement("creator", artist);
@@ -478,7 +478,7 @@ function parseChannelDetail(id, error)
         else
             xml.writeTextElement("title", "[❤]"+title+"#SID"+songs[i].sid);
         xml.writeTextElement("album", "《"+albumtitle+"》#FMID"+douban_fm_fetcher.current_channel_id);
-        xml.writeTextElement("image", imageurl);
+        // xml.writeTextElement("image", imageurl);
         xml.writeEndElement();
     }
     xml.writeEndElement();
