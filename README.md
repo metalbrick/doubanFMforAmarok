@@ -9,3 +9,5 @@ git clone https://github.com/metalbrick/doubanFMforAmarok.git ~/kde4/share/apps/
 ```shell
 git clone https://github.com/metalbrick/doubanFMforAmarok.git ~/kde/share/apps/amarok/scripts/
 ```
+
+Enjoy yourself.
